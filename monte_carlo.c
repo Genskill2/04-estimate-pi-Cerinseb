@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-
+#define random rand
+#define srandom rand
 float mc_pi(int);
 
 float frandom() {
@@ -37,6 +38,18 @@ int main(void) {
       abort();
     }
   }
+}
+float mc _pi(int n)
+{float pi,x,y,z;
+ int count=0;
+ for(int i=0;i<n;++i){
+   x=frandom();
+   y=frandom();
+   z=frandom();
+   if(z<=1)count++;
+ }
+ pi =(double)count/ n*4;
+ return pi;
 }
 
 
